@@ -28,10 +28,11 @@ boxes.forEach((box) => {
     count++;//each time the button is pressed it increments
     if (turnX) {
       box.innerText = "X";
-      box.style.color = "rgb(24, 122, 99)";
+      box.style.color = "#FF7F50";
       turnX = false;
     } else {
       box.innerText = "O";
+      box.style.color="#40E0D0";
       turnX = true;
     }
     box.disabled = true;//so that it can only be clicked once.
