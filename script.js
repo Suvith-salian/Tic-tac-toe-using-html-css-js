@@ -36,7 +36,7 @@ boxes.forEach((box) => {
       turnX = true;
     }
     box.disabled = true;//so that it can only be clicked once.
-    let Winner = checkWinner(); //check the winner a store string(true);
+    let Winner = checkWinner(); //check the winner a store Boolean value(true/false);
     if (count == 9 && !Winner) checkDraw();//out of moves and no winner than draw
   });
 });
@@ -75,6 +75,7 @@ const checkWinner = () => {
       if (posval1 === posval2 && posval2 === posval3) {
         console.log("Winner", posval1);
         showwinner(posval1);
+        return true;
       }
     }
   }
